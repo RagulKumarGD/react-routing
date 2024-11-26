@@ -92,7 +92,7 @@ const handlesubmit=async()=>{
   
     // const response=await api.post('/items',newdata)
     // setPosts(response.data)
-    navigate(-1)
+    navigate('/')
 
 }
  const handledel=async(id)=>{
