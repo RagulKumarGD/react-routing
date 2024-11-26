@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaEdit, FaTrash } from 'react-icons/fa'
+import {  FaTrash } from 'react-icons/fa'
 import {Link, Outlet} from 'react-router-dom'
 
 const Home = ({post,search,handledel,}) => {
