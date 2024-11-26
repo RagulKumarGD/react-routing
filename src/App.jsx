@@ -27,24 +27,24 @@ const App = () => {
   const [edititle,seteditTitle]=useState('')
   const [editpost,seteditpost]=useState('')
  
-  // useEffect(()=>{
-  //   const fetchh=async()=>{
-  //      const response=await fetch('http://localhost:3000/items')
-  //      const data=await response.json()
-  //      setPosts(data)
-       
-       
-  //   }
-  //   (async()=>await fetchh())()
-  // },[])
   useEffect(()=>{
     const fetchh=async()=>{
-      const respone=await api.get('/items')
-      setPosts(respone.data)
-      
+       const response=await fetch('http://localhost:3000/items')
+       const data=await response.json()
+       setPosts(data)
+       
+       
     }
-    fetchh()
+    (async()=>await fetchh())()
   },[])
+  // useEffect(()=>{
+  //   const fetchh=async()=>{
+  //     const respone=await api.get('/items')
+  //     setPosts(respone.data)
+      
+  //   }
+  //   fetchh()
+  // },[])
 
 
   const handelpost=(e)=>{
@@ -74,40 +74,40 @@ console.log(edititle);
 const handlesubmit=async()=>{
     const id=(posts.length+1).toString()
     const newdata={id:id,title:title,body:post}
-  //  const response=await fetch('http://localhost:3000/items',
-  //   {
-  //     method:'POST',
-  //     headers:{'Content-Type':'application/json'},
-  //     body:JSON.stringify({
-  //       id:id,
-  //       title:title,
-  //       body:post
-  //     })
-  //   }
-  //  )
-  //  const responsee=await fetch('http://localhost:3000/items')
-  //      const data=await responsee.json()
-  //      setPosts(data)
+   const response=await fetch('http://localhost:3000/items',
+    {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        id:id,
+        title:title,
+        body:post
+      })
+    }
+   )
+   const responsee=await fetch('http://localhost:3000/items')
+       const data=await responsee.json()
+       setPosts(data)
   
-    const response=await api.post('/items',newdata)
-    setPosts(response.data)
-    navigate('/')
+    // const response=await api.post('/items',newdata)
+    // setPosts(response.data)
+    // navigate('/')
 
 }
  const handledel=async(id)=>{
-  // const response=await fetch(`http://localhost:3000/items/${id}`,
-  //   {
-  //     method:'DELETE',
-  //     headers:{'Content-Type':'application/json'},
+  const response=await fetch(`http://localhost:3000/items/${id}`,
+    {
+      method:'DELETE',
+      headers:{'Content-Type':'application/json'},
       
-  //   }
-  //  )
-  //  const responsee=await fetch('http://localhost:3000/items')
-  //      const data=await responsee.json()
-  //      setPosts(data)
-  const response=await api.delete(`/items/${id}`)
-  const respone=await api.get('/items')
-  setPosts(respone.data)
+    }
+   )
+   const responsee=await fetch('http://localhost:3000/items')
+       const data=await responsee.json()
+       setPosts(data)
+  // const response=await api.delete(`/items/${id}`)
+  // const respone=await api.get('/items')
+  // setPosts(respone.data)
   
   
 
@@ -116,10 +116,27 @@ const handlesubmit=async()=>{
  const handlechange=async(id)=>{
   
   
-  const newdata={id:id,title:edititle,body:editpost}
-  const response=await api.put(`/items/${id}`,newdata)
-  const respone=await api.get('/items')
-  setPosts(respone.data)
+  // const newdata={id:id,title:edititle,body:editpost}
+  // const response=await api.put(`/items/${id}`,newdata)
+  // const respone=await api.get('/items')
+  // setPosts(respone.data)
+
+
+  const newdata={id:id,title:title,body:post}
+  const response=await fetch('http://localhost:3000/items',
+   {
+     method:'POST',
+     headers:{'Content-Type':'application/json'},
+     body:JSON.stringify({
+       id:id,
+       title:edititle,
+       body:editpost
+     })
+   }
+  )
+  const responsee=await fetch('http://localhost:3000/items')
+      const data=await responsee.json()
+      setPosts(data)
   
   
  }
