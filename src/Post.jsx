@@ -1,6 +1,6 @@
 import React from 'react'
 import Newpost from './Newpost'
-import { FaTrash } from 'react-icons/fa'
+
 const Post = ({post,search,posts,handlesubmit,title,setPost,setTitle,handeltitle,handelpost,handledel}) => { 
   return (
     <div>
