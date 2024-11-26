@@ -2,17 +2,17 @@
   "items": [
     {
       "id": "2",
-      "title": "My Second Post",
-      "body": "Made a Video about Newton"
-    },
-    {
-      "id": "2",
       "title": "My Fifth Post",
       "body": "Made video about myself  "
     },
     {
-      "id": "3",
+      "id": "2",
       "title": "my sixth post",
+      "body": "Made video about myself  "
+    },
+    {
+      "id": "4",
+      "title": "my eighth post",
       "body": "Made video about myself  "
     }
   ]

@@ -85,9 +85,7 @@ const handlesubmit=async()=>{
       })
     }
    )
-   const responsee=await fetch('http://localhost:3000/items')
-       const data=await responsee.json()
-       setPosts(data)
+   (async()=>await fetchh())()
   
     // const response=await api.post('/items',newdata)
     // setPosts(response.data)
