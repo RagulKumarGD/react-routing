@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './About.css'
 const About = () => {
   return (
-    <div>
-      <p>this page is all about my learning process of reacct axios</p>
+    <div className='about-content'>
+      <p>this page is all about my learning process of react </p>
     </div>
   )
 }

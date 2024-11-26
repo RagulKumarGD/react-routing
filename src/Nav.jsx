@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react'
+import './Nav.css'
 import {Link, Outlet} from 'react-router-dom'
 const Nav = ({search,setSearch}) => {
     
   return (
-    <div>
-      <div>
-        <input placeholder='Search Post' type='text' onChange={(e)=>setSearch(e.target.value)}/>
-        <label htmlFor="search">Search Post</label>
-      </div>
-       <ul style={{listStyle:'none'}}>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/About'>About</Link></li>
-          <li><Link to='/Post'>Post</Link></li>
+    <div className='nav-container'>
+     
+     <div className="topnav">
+          
+          <p><Link to='/' style={{textDecoration:'none'}}>Home</Link></p>
+          <p><Link to='/About' style={{textDecoration:'none'}}>About</Link></p>
+          <p><Link to='/Post' style={{textDecoration:'none'}}>Post</Link></p>
+          
+          <input type="text" placeholder="Search.." onChange={(e)=>setSearch(e.target.value)}/>
           <Outlet></Outlet>
-       </ul>
+       
+        
+        
+      </div>
     </div>
   )
 }

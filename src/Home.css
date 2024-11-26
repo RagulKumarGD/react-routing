@@ -1,0 +1,36 @@
+
+.List{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.List li{
+    border: 1px solid white;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    width: 300px;
+    
+}
+.List li h2{
+    background-color: white;
+}
+.List li p{
+    background-color: white;
+}
+.List li button{
+    background-color: white;
+    
+}
+.homebtn{
+    background-color: white;
+}
+.homebtn button{
+    padding: 5px;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: transparent;
+}

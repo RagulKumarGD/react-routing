@@ -4,13 +4,13 @@ import { Link, Outlet } from 'react-router-dom'
 const Pagelayout = () => {
   return (
    <>
-        <Link to="/Postpage/1">Post1</Link>
+        <Link to="/Postpage/1" style={{textDecoration:'none'}}>Post1</Link>
         <br/>
-        <Link to="/Postpage/2">Post2</Link>
+        <Link to="/Postpage/2" style={{textDecoration:'none'}}>Post2</Link>
         <br/>
-        <Link to="/Postpage/3">Post3</Link>   
+        <Link to="/Postpage/3" style={{textDecoration:'none'}}>Post3</Link>   
         <br/>
-        <Link to="/Postpage/Newpost">Newpost</Link>   
+        <Link to="/Postpage/Newpost" style={{textDecoration:'none'}}>Newpost</Link>   
         <Outlet/>
      </>
   )

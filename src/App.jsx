@@ -10,7 +10,7 @@ import Missing from './Missing.jsx'
 import Post from './Post.jsx'
 import Pagelayout from './Pagelayout.jsx'
 import './App.css'
-import api from "./api/posts"
+
 
 import {Routes,Route,Link, useParams, useNavigate} from 'react-router-dom'
 import Editpost from './Editpost.jsx'
@@ -36,7 +36,7 @@ const App = () => {
        
     }
     (async()=>await fetchh())()
-  })
+  },[])
   // useEffect(()=>{
   //   const fetchh=async()=>{
   //     const respone=await api.get('/items')
@@ -120,10 +120,12 @@ const handlesubmit=async()=>{
   // setPosts(respone.data)
 
 
-  const newdata={id:id,title:title,body:post}
-  const response=await fetch('http://localhost:3000/items',
+  // const newdata={id:id,title:title,body:post}
+  console.log(`hiiiiiiii${id}`);
+  
+  const response=await fetch(`http://localhost:3000/items/${id}`,
    {
-     method:'POST',
+     method:'PUT',
      headers:{'Content-Type':'application/json'},
      body:JSON.stringify({
        id:id,
@@ -135,6 +137,8 @@ const handlesubmit=async()=>{
   const responsee=await fetch('http://localhost:3000/items')
       const data=await responsee.json()
       setPosts(data)
+      console.log(data);
+      
   
   
  }

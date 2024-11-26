@@ -1,0 +1,43 @@
+.form-list{
+    
+    padding: 20px;
+    width: fit-content;
+    align-items: center; 
+    border-radius: 25px;
+    position: relative;
+    left:40%;
+    margin-top: 100px;
+   border: 1px solid black;
+}
+.form-lists{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-listss{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    
+}
+.form-listss label{
+    margin: 5px;
+}
+
+.form-lists input{
+    border-radius: 25px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.form-list button{
+
+width: fit-content;
+padding: 10px;
+background-color: transparent;
+color: rgb(0, 0, 0);
+border: 0px solid;
+border-radius: 25px;
+}
