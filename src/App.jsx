@@ -85,11 +85,14 @@ const handlesubmit=async()=>{
       })
     }
    )
-   (async()=>await fetchh())()
+  //  (async()=>await fetchh())()
+  const responsee=await fetch('http://localhost:3000/items')
+  const data=await responsee.json()
+       setPosts(data)
   
     // const response=await api.post('/items',newdata)
     // setPosts(response.data)
-    // navigate('/')
+    navigate(-1)
 
 }
  const handledel=async(id)=>{
