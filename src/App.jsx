@@ -36,7 +36,7 @@ const App = () => {
        
     }
     (async()=>await fetchh())()
-  },[])
+  })
   // useEffect(()=>{
   //   const fetchh=async()=>{
   //     const respone=await api.get('/items')
